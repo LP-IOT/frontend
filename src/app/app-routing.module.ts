@@ -11,7 +11,10 @@ const routes: Routes = [
         m => m.LoginModule
       )
   },
-  {path: 'sidenav', component: SidenavComponent},
+  {
+    path: 'sidenav',
+    component: SidenavComponent
+  },
   {
     path: 'sidenav',
     component: SidenavComponent,

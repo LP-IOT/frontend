@@ -1,0 +1,18 @@
+.title {
+    text-align: center;
+    height: 10vh;
+    background-color: #8D0000;
+    position: relative;
+}
+
+label {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    color: whitesmoke;
+    font-size: 250%;
+}
