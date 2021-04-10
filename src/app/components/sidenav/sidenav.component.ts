@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidenavComponent implements OnInit {
 
+  opened!: boolean;
+
   constructor() { }
 
   ngOnInit(): void {
+    this.opened = true;
+  }
+
+  open() {
+    this.opened = !this.opened;
   }
 
 }

@@ -1,12 +1,31 @@
+<div class="page-container">
+    <header>
+        <div>
+            <button mat-button class="menu-button" (click)="open()">
+                <mat-icon [inline]="true" *ngIf="!this.opened">menu</mat-icon>
+                <mat-icon [inline]="true" *ngIf="this.opened">menu_open</mat-icon>
+            </button>
+
+            <a routerLink="/">
+                <span class="app-title">C2I - Gestion</span>
+            </a>
+        </div>
+    </header>
+</div>
+
 <mat-sidenav-container>
-    <mat-sidenav opened mode="side">
+
+    <mat-sidenav opened mode="side" [(opened)]="opened">
         <mat-nav-list>
-            <a mat-list-item [routerLink]="['page-one']">Accueil</a>
-            <a mat-list-item [routerLink]="['page-two']">Page Two</a>
-            <a mat-list-item [routerLink]="['page-three']">Page Three</a>
+            <a mat-list-item [routerLink]="['page-one']" (click)="open()">Accueil</a>
+            <a mat-list-item [routerLink]="['page-two']" (click)="open()">Import étudiants</a>
+            <a mat-list-item [routerLink]="['page-three']" (click)="open()">Page Three</a>
         </mat-nav-list>
     </mat-sidenav>
+
     <mat-sidenav-content>
+
         <router-outlet></router-outlet>
     </mat-sidenav-content>
+
 </mat-sidenav-container>

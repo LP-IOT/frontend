@@ -4,6 +4,8 @@ import { SidenavComponent } from './sidenav.component';
 import { RouterModule } from '@angular/router';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 
 
 
@@ -15,7 +17,9 @@ import { MatListModule } from '@angular/material/list';
     CommonModule, 
     MatSidenavModule,
     RouterModule,
-    MatListModule
+    MatListModule,
+    MatButtonModule,
+    MatIconModule
   ]
 })
 export class SidenavModule { }
