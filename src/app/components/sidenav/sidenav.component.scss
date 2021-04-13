@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+.page-container {
+    height: 100%;
+    background: #5a0404;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+    header {
+        background: #5a0404;
+        color: #fff;
+        padding: 18px 24px;
+        font-size: 14px;
+        font-weight: bold;
+        display: flex;
+        justify-content: flex-start;
+        align-items: baseline;
+        .menu-button {
+            font-size: 70px;
+            margin-right: 24px;
+        }
+        .app-title {
+            font-size: 50px;
+        }
+    }
+}
+
+mat-sidenav-content {
+    height: 90vh;
+}
+
+mat-sidenav {
+    background-color: #5a0404da;
+}
+
+mat-nav-list a {
+    color: whitesmoke
+}
