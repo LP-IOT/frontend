@@ -1,35 +1,41 @@
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
-.page-container {
-    height: 100%;
+.top-navbar {
+    height: 5vh;
     background: #5a0404;
-    color: #000;
     display: flex;
-    flex-direction: column;
-    a {
-        color: inherit;
-        text-decoration: none;
-    }
-    header {
-        background: #5a0404;
-        color: #fff;
-        padding: 18px 24px;
-        font-size: 14px;
-        font-weight: bold;
+    flex-direction: row;
+    padding: 0;
+    align-items: center;
+    .start {
         display: flex;
-        justify-content: flex-start;
-        align-items: baseline;
+        flex-direction: row;
+        align-items: center;
         .menu-button {
-            font-size: 70px;
-            margin-right: 24px;
+            vertical-align: middle;
+            color: inherit;
+            outline: none;
+            background: none;
+            margin: 0;
+            border: none;
+            padding: 0;
+            line-height: 0;
+            cursor: pointer;
+            width: 50px;
+            height: 50px;
+            color: white;
+            font-size: 25px;
         }
         .app-title {
-            font-size: 50px;
+            width: 129px;
+            color: white;
+            font-weight: bold;
+            margin-left: 20px;
         }
     }
 }
 
 mat-sidenav-content {
-    height: 90vh;
+    height: 95vh;
 }
 
 mat-sidenav {
@@ -37,5 +43,11 @@ mat-sidenav {
 }
 
 mat-nav-list a {
-    color: whitesmoke
+    color: white;
+    padding: 0 2px;
+}
+
+.close {
+    height: 95vh;
+    background-color: #5a0404da;
 }

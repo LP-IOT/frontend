@@ -7,16 +7,36 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidenavComponent implements OnInit {
 
-  opened!: boolean;
+  deployed!: boolean;
+  retracted!: boolean;
 
   constructor() { }
 
   ngOnInit(): void {
-    this.opened = true;
+    this.deploy();
   }
 
-  open() {
-    this.opened = !this.opened;
+  deploy() {
+    this.deployed = true;
+    this.retracted = false;
+    console.log("deployed")
+  }
+
+  retract() {
+    this.deployed = false;
+    this.retracted = true;
+    console.log("retracted")
+  }
+
+  advise() {
+    if(this.deployed) {
+      this.retract();
+      return;
+    }
+    else if(this.retracted) {
+      this.deploy();
+      return;
+    }
   }
 
 }
