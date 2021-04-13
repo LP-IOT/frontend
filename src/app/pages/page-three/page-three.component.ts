@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Domaine } from 'src/app/entities/domaine/domaine';
+import { DomaineService } from 'src/app/services/domaine/domaine.service';
 
 @Component({
   selector: 'app-page-three',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PageThreeComponent implements OnInit {
 
-  constructor() { }
+  domaine!: Domaine[];
+
+  constructor(private service:DomaineService) { }
 
   ngOnInit(): void {
+    this.service.getDomaines();
   }
 
 }
