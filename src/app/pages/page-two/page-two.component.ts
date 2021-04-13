@@ -37,29 +37,36 @@ export class PageTwoComponent implements OnInit {
   
       if (file) {
         this.currentFile = file;
-  
-        this.uploadService.upload(this.currentFile).subscribe(
-          (event: any) => {
-            if (event.type === HttpEventType.UploadProgress) {
-              this.progress = Math.round(100 * event.loaded / event.total);
-            } else if (event instanceof HttpResponse) {
-              this.message = event.body.message;
-              this.fileInfos = this.uploadService.getFiles();
-            }
-          },
-          (err: any) => {
-            console.log(err);
-            this.progress = 0;
-  
-            if (err.error && err.error.message) {
-              this.message = err.error.message;
-            } else {
-              this.message = 'Could not upload the file!';
-            }
-  
-            this.currentFile = undefined;
-          });
-      }
+        if(file.name.includes(".csv")) {
+          this.uploadService.upload(this.currentFile).subscribe(
+            (event: any) => {
+              if (event.type === HttpEventType.UploadProgress) {
+                this.progress = Math.round(100 * event.loaded / event.total);
+              } else if (event instanceof HttpResponse) {
+                this.message = event.body.message;
+                this.fileInfos = this.uploadService.getFiles();
+              }
+            },
+            (err: any) => {
+              console.log(err);
+              this.progress = 0;
+    
+              if (err.error && err.error.message) {
+                this.message = "Impossible d'upload le fichier : " + err.error.message;
+              } else {
+                this.message = "Impossible d'upload le fichier";
+              }
+    
+              this.currentFile = undefined;
+            });
+        }
+        else {
+          this.progress = 0;
+          this.message = "Impossible d'ouvrir ce fichier, seul les fichiers csv sont acceptés";
+          this.currentFile = undefined;
+        }
+    }
+    
   
       this.selectedFiles = undefined;
     }
