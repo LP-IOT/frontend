@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { PageOneRoutingModule } from './page-one-routing.module';
 import { PageOneComponent } from './page-one.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { PageOneComponent } from './page-one.component';
   ],
   imports: [
     CommonModule,
-    PageOneRoutingModule
+    PageOneRoutingModule,
+    MatDialogModule
   ]
 })
 export class PageOneModule { }

@@ -3,13 +3,15 @@
     <div class="row">
         <div class="col-8">
             <label class="btn btn-default p-0">
-            <input type="file" (change)="selectFile($event)" />
+            <input #csvReader name="Upload CSV" type="file" (change)="selectFile($event)" />
           </label>
         </div>
 
         <div class="col-4">
             <button class="btn btn-success btn-sm" [disabled]="!selectedFiles" (click)="upload()">
-            Upload
+                <span class="material-icons-outlined">
+                    <mat-icon [inline]="true">file_upload</mat-icon>
+                </span>
           </button>
         </div>
     </div>
@@ -22,13 +24,31 @@
 
     <div *ngIf="message" class="alert alert-secondary" role="alert">{{ message }}</div>
 
-    <div class="card mt-3">
-        <div class="card-header">List of Files</div>
-        <ul class="list-group list-group-flush" *ngFor="let file of fileInfos | async">
-            <li class="list-group-item">
-                <a href="{{ file.url }}">{{ file.name }}</a>
-            </li>
-        </ul>
-    </div>
+    <table class="minimalistBlack" *ngIf="records.length > 0">
+        <thead>
+            <tr>
+                <th>ID </th>
+                <th>Nom </th>
+                <th>Prenom </th>
+            </tr>
+        </thead>
+        <tbody>
+            <div *ngIf="resetPair()"></div>
+            <tr *ngFor="let record of records;let i = index;">
+
+                <td class="white-row" *ngIf="!isPair()"> <span>{{record.id}}</span> </td>
+                <td class="white-row" *ngIf="!isPair()"> <span>{{record.nom}}</span> </td>
+                <td class="white-row" *ngIf="!isPair()"> <span>{{record.prenom}}</span> </td>
+                <td class="colored-row" *ngIf="isPair()"> <span>{{record.id}}</span> </td>
+                <td class="colored-row" *ngIf="isPair()"> <span>{{record.nom}}</span> </td>
+                <td class="colored-row" *ngIf="isPair()"> <span>{{record.prenom}}</span> </td>
+                <div *ngIf="swapPair()"></div>
+            </tr>
+
+        </tbody>
+    </table>
+
+
+
 
 </div>

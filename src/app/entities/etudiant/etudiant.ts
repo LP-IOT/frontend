@@ -6,6 +6,7 @@ import { Ufr } from "../ufr/ufr";
 import { Vague } from "../vague/vague";
 
 export class Etudiant {
+    id!: string;
     nom!: string;
     prenom!: string;
     epreuve!: Epreuve;

@@ -8,12 +8,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { HttpClientModule } from '@angular/common/http';
 import { NoteFormComponent } from './pages/note-form/note-form.component';
+import { CorrecteurComponent } from './forms/correcteur/correcteur/correcteur.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    NoteFormComponent
+    NoteFormComponent,
+    CorrecteurComponent
   ],
   imports: [
     BrowserModule,
