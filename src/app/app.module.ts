@@ -10,6 +10,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { NoteFormComponent } from './pages/note-form/note-form.component';
 import { CorrecteurComponent } from './forms/correcteur/correcteur/correcteur.component';
 
+import {MatInputModule} from '@angular/material/input';
+import { MatIconModule } from '@angular/material/icon';
+import { FormsModule } from '@angular/forms'; 
+
 
 @NgModule({
   declarations: [
@@ -21,7 +25,10 @@ import { CorrecteurComponent } from './forms/correcteur/correcteur/correcteur.co
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatInputModule,
+    MatIconModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],

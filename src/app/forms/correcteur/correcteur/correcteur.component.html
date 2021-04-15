@@ -1,1 +1,15 @@
-<p>correcteur works fine !</p>
+<mat-form-field class="example-form-field">
+    <mat-label>Pseudo du correcteur</mat-label>
+    <input matInput type="text" [(ngModel)]="value">
+    <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+        <mat-icon [inline]="true">close</mat-icon>
+    </button>
+  </mat-form-field>
+<br>
+<div class="sending-button">
+<button class="btn btn-success btn-sm"  (click)="send()">
+    <span class="material-icons-outlined">
+        <mat-icon [inline]="true">group_add</mat-icon>
+    </span>
+</button>
+</div>
