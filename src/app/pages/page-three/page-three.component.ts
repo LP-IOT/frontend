@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Domaine } from 'src/app/entities/domaine/domaine';
+import { Etudiant } from 'src/app/entities/etudiant/etudiant';
+import { EtudiantService } from 'src/app/services/etudiant/etudiant.service';
 
 @Component({
   selector: 'app-page-three',
@@ -7,9 +10,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PageThreeComponent implements OnInit {
 
-  constructor() { }
+  etudiants!: Etudiant[];
+
+  constructor(private service:EtudiantService) { }
 
   ngOnInit(): void {
+    console.log("test")
+    this.service.getEtudiants().subscribe(etus => {
+      console.log(etus)
+      etus.forEach(e => {
+        this.etudiants.push(e);
+        console.log(e)
+      });
+      
+    });
+
   }
 
 }

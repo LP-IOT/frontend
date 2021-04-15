@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { PageTwoRoutingModule } from './page-two-routing.module';
 import { PageTwoComponent } from './page-two.component';
+import { MatIconModule } from '@angular/material/icon';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { PageTwoComponent } from './page-two.component';
   ],
   imports: [
     CommonModule,
-    PageTwoRoutingModule
+    PageTwoRoutingModule,
+    MatIconModule
   ]
 })
 export class PageTwoModule { 

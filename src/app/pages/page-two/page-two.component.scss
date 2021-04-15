@@ -1,3 +1,61 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 .body {
-    margin: 5%;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+table.minimalistBlack {
+    border: 3px solid #5a0404da;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 75px;
+    width: 50%;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+table.minimalistBlack td,
+table.minimalistBlack th {
+    border: 1px solid #5a0404;
+    padding: 5px 4px;
+}
+
+table.minimalistBlack tbody td .white-row .colored-row {
+    font-size: 13px;
+}
+
+table.minimalistBlack thead {
+    background: #5a040471;
+    background: -moz-linear-gradient(top, #5a0404c0, #5a0404c0, #5a0404c0);
+    background: -webkit-linear-gradient(top, #5a0404c0, #5a0404c0, #5a0404c0);
+    background: linear-gradient(to bottom, #5a0404c0, #5a0404c0, #5a0404c0);
+    border-bottom: 3px solid #5a0404
+}
+
+table.minimalistBlack thead th {
+    font-size: 15px;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+    text-align: center
+}
+
+table.minimalistBlack tfoot {
+    font-size: 14px;
+    font-weight: 700;
+    color: #000;
+    border-top: 3px solid #000
+}
+
+table.minimalistBlack tfoot td {
+    font-size: 14px
+}
+
+.white-row {
+    background: #5a04041a;
+}
+
+.colored-row {
+    background: #5a040471;
 }
