@@ -6,4 +6,5 @@ export class Epreuve {
     anneeEpreuve!: number;
     etudiants!: Etudiant[];
     copies!: Copie[];
+    id!: number;
 }

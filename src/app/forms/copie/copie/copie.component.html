@@ -1,0 +1,74 @@
+<mat-form-field class="example-form-field">
+    <mat-label>Note /5</mat-label>
+    <input matInput type="text" [(ngModel)]="note">
+
+   
+</mat-form-field>
+<br>
+<mat-form-field>
+    <mat-label>Etudiant</mat-label>
+    <input matInput type="text"
+           placeholder="Pick one"
+           aria-label="Number"
+           matInput
+           [formControl]="etuControl"
+           [matAutocomplete]="autoEtu">
+    <mat-autocomplete autoActiveFirstOption #autoEtu="matAutocomplete">
+      <mat-option *ngFor="let option of filteredEtusOptions | async" [value]="option">
+        {{option}}
+      </mat-option>
+    </mat-autocomplete>
+</mat-form-field>
+<br>
+<mat-form-field>
+    <mat-label>Domaine</mat-label>
+    <input matInput type="text"
+           placeholder="Pick one"
+           aria-label="Number"
+           matInput
+           [formControl]="domaineControl"
+           [matAutocomplete]="autoDomaine">
+    <mat-autocomplete autoActiveFirstOption #autoDomaine="matAutocomplete">
+      <mat-option *ngFor="let option2 of filteredDomainesOptions | async" [value]="option2">
+        {{option2}}
+      </mat-option>
+    </mat-autocomplete>
+</mat-form-field>
+<br>
+<mat-form-field>
+    <mat-label>Lot</mat-label>
+    <input matInput type="text"
+           placeholder="Pick one"
+           aria-label="Number"
+           matInput
+           [formControl]="lotControl"
+           [matAutocomplete]="lotDomaine">
+    <mat-autocomplete autoActiveFirstOption #lotDomaine="matAutocomplete">
+      <mat-option *ngFor="let option3 of filteredLotsOptions | async" [value]="option3">
+        {{option3}}
+      </mat-option>
+    </mat-autocomplete>
+</mat-form-field>
+<br>
+<mat-form-field>
+    <mat-label>Epreuve</mat-label>
+    <input matInput type="text"
+           placeholder="Pick one"
+           aria-label="Number"
+           matInput
+           [formControl]="epreuveControl"
+           [matAutocomplete]="epreuveDomaine">
+    <mat-autocomplete autoActiveFirstOption #epreuveDomaine="matAutocomplete">
+      <mat-option *ngFor="let option4 of filteredEpreuvesOptions | async" [value]="option4">
+        {{option4}}
+      </mat-option>
+    </mat-autocomplete>
+</mat-form-field>
+<br>
+<div class="sending-button">
+<button class="btn btn-success btn-sm"  (click)="send()">
+    <span class="material-icons-outlined">
+        <mat-icon [inline]="true">post_add</mat-icon>
+    </span>
+</button>
+</div>

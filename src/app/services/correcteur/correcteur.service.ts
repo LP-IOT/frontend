@@ -7,7 +7,7 @@ import { Correcteur } from 'src/app/entities/correcteur/correcteur';
 })
 export class CorrecteurService {
 
-  private baseUrl = 'http://adrianpaul-carrieres.fr:3000/correcteur';
+  private baseUrl = 'http://adrianpaul-carrieres.fr:3000/api/correcteur';
 
   constructor(private http: HttpClient) { }
 
