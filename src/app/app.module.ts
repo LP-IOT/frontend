@@ -10,18 +10,35 @@ import { HttpClientModule } from '@angular/common/http';
 import { NoteFormComponent } from './pages/note-form/note-form.component';
 import { CorrecteurComponent } from './forms/correcteur/correcteur/correcteur.component';
 
+import {MatInputModule} from '@angular/material/input';
+import { MatIconModule } from '@angular/material/icon';
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms'
+import { CopieComponent } from './forms/copie/copie/copie.component'; 
+import { MatCardModule } from '@angular/material/card'
+import {MatButtonModule} from '@angular/material/button'; 
+import {MatAutocompleteModule} from '@angular/material/autocomplete'; 
+
 
 @NgModule({
   declarations: [
     AppComponent,
     NoteFormComponent,
-    CorrecteurComponent
+    CorrecteurComponent,
+    CopieComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatInputModule,
+    MatIconModule,
+    MatCardModule,
+    MatButtonModule,
+    FormsModule,
+    MatAutocompleteModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -15,4 +15,5 @@ export class Etudiant {
     vague!: Vague;
     admission!: Admission;
     copies!: Copie[];
+    idetudiant!: number;
 }

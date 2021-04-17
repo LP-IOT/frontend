@@ -14,7 +14,7 @@
 </div>
 
 <mat-sidenav-container>
-    <mat-sidenav opened mode="side" [(opened)]="this.deployed">
+    <mat-sidenav opened mode="side" [(opened)]="this.retracted">
         <mat-nav-list>
             <a mat-list-item [routerLink]="['page-one']" (click)="this.retract()">Accueil</a>
             <a mat-list-item [routerLink]="['page-two']" (click)="this.retract()">Import étudiants</a>
@@ -22,7 +22,7 @@
         </mat-nav-list>
     </mat-sidenav>
 
-    <mat-sidenav opened mode="side" [(opened)]="this.retracted">
+    <mat-sidenav opened mode="side" [(opened)]="this.deployed">
         <mat-nav-list>
             <a mat-list-item [routerLink]="['page-one']" (click)="this.retract()">
                 <mat-icon [routerLink]="['page-one']">home</mat-icon>
